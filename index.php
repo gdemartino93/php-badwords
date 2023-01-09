@@ -29,9 +29,10 @@
             <span>Secondo esercizio</span>
             <span class="fs-3 text-center text-success fw-bold">
                 <?php
-                echo $text;
-                //Ottenre parola da censurare dalla scimmia
-                $toCensor = $_GET["toCensor"]
+                //ottenere dalla scimmia la parola da censurare
+                $toCensor = $_GET["toCensor"];
+                //sostituisci la parola da censurare con i 3 asterischi
+                echo str_replace($toCensor, "***" , $text);
                 ?>
             </span>
             <span class="fs-3"> Risultato: </span>
@@ -54,3 +55,6 @@
     </main>
 </body>
 </html>
+
+
+<!-- echo str_replace("non è","è",$testo); -->

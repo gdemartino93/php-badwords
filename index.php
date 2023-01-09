@@ -7,6 +7,20 @@
     <title>Bad Words</title>
 </head>
 <body>
-    
+    <main>
+        <p>
+            <?php
+                $testo = "asd";
+                echo $testo;
+            ?>
+        </p>
+        <span>Il totale dei caratteri é:</span>
+        <span>
+            <?php
+                echo strlen($testo);
+            ?> 
+        </span>
+
+    </main>
 </body>
 </html>

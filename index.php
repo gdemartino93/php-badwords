@@ -10,6 +10,7 @@
 <body>
     <main >
         <section class="d-flex justify-content-center align-items-center flex-column">
+            <span>primo esercizio</span>
             <span class="fs-3"> Questo è la stringa da contare: </span>
             <p class="fs-3 text-center text-success fw-bold">
                 <?php
@@ -18,28 +19,29 @@
                 ?>
             </p>
             <span class="fs-3">Il totale dei caratteri é:</span>
-            <span class="fs-3 fw-bold text-danger">
+            <span class="fs-3 fw-bold text-info">
                 <?php
                 echo strlen($text);
                 ?> 
             </span>
         </section>
-        <section class="d-flex justify-content-center align-items-center flex-column">
+        <section class="d-flex justify-content-center align-items-center flex-column my-5">
             <span>Secondo esercizio</span>
-            <span>
+            <span class="fs-3 text-center text-success fw-bold">
                 <?php
                 echo $text;
                 //Ottenre parola da censurare dalla scimmia
                 $toCensor = $_GET["toCensor"]
                 ?>
             </span>
-            <span>
+            <span class="fs-3"> Risultato: </span>
+            <span class="fs-3 fw-bold text-info">
                 <?php
                 //verificare se la parola ottenuta dalla scimmia è presente nel testo della variabile text
                     if (str_contains($text ,$toCensor)){
-                    echo "Esiste la stringa";
+                    echo "La parola " . '"' .  $toCensor . '"' . " è presente all'interno del testo" ;
                     }else{
-                    echo "non contiene";
+                    echo "La parola " . "'" . $toCensor . "'" . " NON è presente all'interno del testo" ;
                     }
                 ?>
             </span>

@@ -13,16 +13,40 @@
             <span class="fs-3"> Questo è la stringa da contare: </span>
             <p class="fs-3 text-center text-success fw-bold">
                 <?php
-                    $testo = "asd";
-                    echo $testo;
+                    $text = "Questo è un testo lungo da controllare se contiene la parola da censurare";
+                    echo $text;
                 ?>
             </p>
             <span class="fs-3">Il totale dei caratteri é:</span>
             <span class="fs-3 fw-bold text-danger">
                 <?php
-                    echo strlen($testo);
+                echo strlen($text);
                 ?> 
             </span>
+        </section>
+        <section class="d-flex justify-content-center align-items-center flex-column">
+            <span>Secondo esercizio</span>
+            <span>
+                <?php
+                echo $text;
+                //Ottenre parola da censurare dalla scimmia
+                $toCensor = $_GET["toCensor"]
+                ?>
+            </span>
+            <span>
+                <?php
+                //verificare se la parola ottenuta dalla scimmia è presente nel testo della variabile text
+                    if (str_contains($text ,$toCensor)){
+                    echo "Esiste la stringa";
+                    }else{
+                    echo "non contiene";
+                    }
+                ?>
+            </span>
+            <p>
+                
+            </p>
+
         </section>
 
     </main>
